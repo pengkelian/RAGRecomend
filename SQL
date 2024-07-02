@@ -1,0 +1,19 @@
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,        -- 自增ID
+    title VARCHAR(255) NOT NULL,              -- 产品标题
+    brand VARCHAR(100),                       -- 品牌
+    feature TEXT,                             -- 特点
+    `rank` VARCHAR(100),                      -- 排名
+    date VARCHAR(100),                        -- 日期
+    asin VARCHAR(20) UNIQUE,                  -- ASIN编号, marked as unique instead of primary
+    imageURL TEXT,                            -- 图片URL
+    imageURLHighRes TEXT,                     -- 高分辨率图片URL
+    description TEXT,                         -- 描述
+    price DECIMAL(10, 2),                     -- 价格
+    also_view TEXT,                           -- 用户还浏览了
+    also_buy TEXT,                            -- 用户还购买了
+    fit VARCHAR(50),                          -- 适合度
+    details TEXT,                             -- 细节
+    similar_item TEXT,                        -- 类似商品
+    tech1 TEXT                                -- 技术参数
+) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
